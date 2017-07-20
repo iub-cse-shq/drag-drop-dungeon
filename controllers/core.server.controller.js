@@ -23,3 +23,10 @@ exports.make = function(req, res) {
 		request: req
 	});
 };
+
+exports.play = function(req, res) {
+	res.render('./../public/views/play.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};

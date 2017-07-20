@@ -6,4 +6,5 @@ module.exports = function(app) {
 	app.route('/').get(core.index);
 	app.route('/about').get(core.about);
 	app.route('/make').get(core.make);
+	app.route('/play').get(core.play);
 };
