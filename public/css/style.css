@@ -1,0 +1,93 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+}
+
+#grid {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border: 1px solid #999;
+    margin: 120px auto 0 auto;
+}
+
+#grid div {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+#grid #cell1 {
+    border-right: 1px solid #ccc;
+    width: 99px;
+}
+
+#grid #cell2 {
+    border-right: 1px solid #ccc;
+    width: 99px;
+}
+
+#grid #cell3 {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    height: 99px;
+    width: 99px;
+}
+
+#grid #cell4 {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    height: 99px;
+    width: 99px;
+}
+
+#grid #cell5 {
+    border-top: 1px solid #ccc;
+    height: 99px;
+    width: 99px;
+}
+
+#grid #cell6 {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    height: 99px;
+    width: 99px;
+}
+
+#grid #cell7 {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    height: 99px;
+    width: 99px;
+}
+
+#grid #cell8 {
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    height: 99px;
+    width: 99px;
+}
+
+div#box.dropped {
+    background: silver;
+}
+
+div#grid.focus {
+    border: 1px solid red;
+}
+
