@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var ArticleSchema = {
+var PlaystatusSchema = {
 
   status : {
     type: String,
@@ -9,7 +9,7 @@ var ArticleSchema = {
     required: 'Title required'
   },
 
-   map: {
+  map: {
     type: Schema.ObjectId,
     ref: 'Map'
   },
@@ -25,5 +25,5 @@ var ArticleSchema = {
   }
 }
 
-var Article = mongoose.model('Article', ArticleSchema, 'articles');
-module.exports = Article;
+var Playstatus = mongoose.model('Playstatus', PlaystatusSchema, 'playstatus');
+module.exports = Playstatus;

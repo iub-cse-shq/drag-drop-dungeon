@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var ArticleSchema = {
+var MapSchema = {
 
   name: {
     type: String,
@@ -22,5 +22,5 @@ var ArticleSchema = {
   }
 }
 
-var Article = mongoose.model('Article', ArticleSchema, 'articles');
-module.exports = Article;
+var Map = mongoose.model('Map', MapSchema, 'maps');
+module.exports = Map;
