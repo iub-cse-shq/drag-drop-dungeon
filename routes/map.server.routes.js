@@ -1,22 +1,10 @@
 module.exports = function(app){
 
- var maps = require('./../controllers/maps.server.controller.js');
- var users = require('./../controllers/users.server.controller.js');
+    var maps = require('./../controllers/maps.server.controller.js');
+    var users = require('./../controllers/users.server.controller.js');
 
- app.route('/api/maps')
-	.get(maps.list)
-	.post(users.requiresLogin, maps.create);
-
-  app.route('/api/maps/:mapId')
-	.get(maps.read)
-  .delete(users.requiresLogin, maps.delete);
-
-	app.route('/api/maps/edit/:mapId')
-	.get(maps.read)
-	.put(users.requiresLogin, maps.update);
-
-
-app.param('mapId', maps.mapByID);
-
+   //Routes to render views
+   app.route('/maps/new').get(maps.new);   //this route should open your map maker page
+   app.route('/maps/all').get(maps.all);   //this route will open list.ejs for maps, where all maps will be listed 
 
 }

@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+
 var MapSchema = {
 
   name: {
@@ -8,8 +9,11 @@ var MapSchema = {
     trim: true,
     required: 'Title required'
   },
-
-  content: [],
+  
+  cells: {
+    type: String,
+    default: ''
+  },
 
   user: {
     type: Schema.ObjectId,
