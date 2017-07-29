@@ -1,28 +1,21 @@
 'use strict';
 
 exports.index = function(req, res) {
-	res.render('./../public/views/index.ejs', {
+	res.render('./../public/views/map/index.ejs', {
 		user: req.user || null,
 		request: req
 	});
 };
 
 exports.new = function(req, res) {
-	res.render('./../public/views/create.ejs', {
-		user: req.user || null,
-		request: req
-	});
-};
-
-exports.edit = function(req, res) {
-	res.render('./../public/views/edit.ejs', {
+	res.render('./../public/views/map/create.ejs', {
 		user: req.user || null,
 		request: req
 	});
 };
 
 exports.view = function(req, res) {
-	res.render('./../public/views/view.ejs', {
+	res.render('./../public/views/map/view.ejs', {
 		user: req.user || null,
 		request: req
 	});
@@ -38,7 +31,7 @@ exports.all = function(req, res) {
     } else {
       console.log(data);
 
-      res.render('./../public/views/list.ejs', {
+      res.render('./../public/views/map/list.ejs', {
     		user: req.user || null,
     		request: req,
                 maps: data
