@@ -7,7 +7,6 @@ var MapSchema = {
     type: String,
     default: '',
     trim: true,
-    required: 'Title required'
   },
   
   cells: {

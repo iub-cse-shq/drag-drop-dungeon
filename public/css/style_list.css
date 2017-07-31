@@ -1,0 +1,10 @@
+.hoverable:hover{
+    text-decoration: none; 
+   background-color:#14141f;
+    color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
