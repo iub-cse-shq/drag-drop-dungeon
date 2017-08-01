@@ -1,9 +1,23 @@
+.fix *,
+.fix *:before,
+.fix *:after {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+
 #grid {
     width: 300px;
     height: 300px;
     position: relative;
     border: 1px solid #999;
     margin: 120px auto 0 auto;
+}
+
+#grid div {
+    width: 100px;
+    height: 100px;
+    float: left;
 }
 
 #grid div {

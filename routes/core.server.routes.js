@@ -6,5 +6,5 @@ module.exports = function(app) {
 	app.route('/').get(core.index);
 	app.route('/create').get(core.new);
 	app.route('maps/all').get(core.all);
-	app.route('maps/all').get(core.all);
+	app.route('/index').get(core.index);
 };
