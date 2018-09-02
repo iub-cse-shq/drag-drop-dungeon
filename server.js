@@ -13,7 +13,7 @@ var express = require ('express');
 
 var uri = process.env.MONGOLAB_URI || config.db.uri;
 mongoose.Promise = require('q').Promise;
-var db = mongoose.connect(uri,function(){
+var db = mongoose.connect(uri, function(){
 	require('./seeds.js');
 });
 
