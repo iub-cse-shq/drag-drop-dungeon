@@ -6,8 +6,8 @@ module.exports = function(app){
 //API routes
  app.route('/api/maps')
 	.get(maps.list)
-	.post(users.requiresLogin, maps.create);
-
+	.post(maps.create);
+ 
   app.route('/api/maps/:mapId')
 	.get(maps.read)
   .delete(users.requiresLogin, maps.delete);

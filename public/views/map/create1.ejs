@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <script src="js/Youindex.js"></script>
+		 <title><!--Dungeon --> </title>
+	  <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<nav class="social">
+	
+			<link rel="stylesheet" type="text/css" href="css/style11.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+	</head>
+
+
+<body>
+	
+	<header>
+		<nav class="navbar-fixed-top">
+			<div class="row clearfix">
+			
+				<img src="image/logo3.png" class="logo">
+				<ul class="main-nav animated bounceIn " id="check-class"> 
+					<li><a href="/index"><button type="button" class ="btn btn-noob">Home</button></a></li>
+					<li><a href="/create2"><button type="button" class ="btn btn-noob">Game Instructions</button></a></li>	
+					<li><a href="/create1"><button type="button" class ="btn btn-noob">Contact Us</button></a></li>
+				</ul>
+			</div>
+		</nav>
+		
+	</header>
+	     <br></br>
+	
+		<div class="contact-title">
+			<h1>We are ready to serve you!</h1>
+			
+			<h3>Send us Messages</h3>
+		</div>
+		<div class="contact-form">
+			
+			<form id="contact-form" method="post" action="" >
+				<input name="name" type="text" class="form-control" placeholder="your_name" required><br>
+				<input name="email" type="email" class="form-control" placeholder="your_email" required><br>
+				<textarea name="message"  class="form-control" placeholder="message" row="4" required></textarea><br>
+				<input type="submit" class="form-control submit" value="SEND MESSAGE">
+			</form>
+			
+			
+		</div>
+		<div class="icon-bar">
+  <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a> 
+  <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="https://www.google.com/" class="google"><i class="fa fa-google"></i></a> 
+  
+</div>
+
+<script>
+    var user ={ name: "", email: "", message};
+    $('#SEND MESSAGE').click(function(){
+        user.name = $("#name").val();
+        user.email = $("#email").val();
+        user.message = $("#message").val();
+        $.ajax({
+            method:"POST",
+            url:"/submit_user",
+            data: user
+        }).done(function(response){
+            console.log("Submit Successfully");
+        }).fail(function(response){
+            console.log(response);
+        })
+    });
+    
+
+
+
+
+</script>
+
+
+</body>

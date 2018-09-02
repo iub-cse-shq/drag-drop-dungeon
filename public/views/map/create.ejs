@@ -2,109 +2,110 @@
 
 <html>
 	<head>
+		 <title>Create Map</title>
 	  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	  <link rel="stylesheet" type="text/css" href="/css/style_grid.css">
+	  <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <script src="js/Youindex.js"></script>
+		 <title><!--Dungeon --> </title>
+	  <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<nav class="social">
+	
+			<link rel="stylesheet" type="text/css" href="css/style11.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	</head>
 
 
 <body>
+		<header>
+		<nav >
+			<div class="row clearfix">
+			
+				<img src="image/logo3.png" class="logo">
+				<ul class="main-nav animated bounceIn " id="check-class"> 
+					<li><a href="/index"><button type="button" class ="btn btn-noob">Home</button></a></li>
+					<li><a href="/create2"><button type="button" class ="btn btn-noob">Game Instructions</button></a></li>	
+					<li><a href="/create1"><button type="button" class ="btn btn-noob">Contact Us</button></a></li>
+				</ul>
+			</div>
+		</nav>
+		
+	</header>
+	<br></br>
 	<div class = "container">
 		<div class = "jumbotron">
 			<h1> Make Screen </h1>
 		</div>
 	</div>
-
+    
 	<div class="container">
 		<div class="input-group">
+			
+          <span class="input-group-addon" >Map Size</span>
+	      <input  type="text" class="form-control" id="map_size">
 	      <span class="input-group-addon" >Map Name</span>
-	      <input type="text" class="form-control" name="msg" id="text_map_name">
+	      <input  type="text" class="form-control"  id="map_name">
+         
 	      <span class="input-group-btn">
-          <button class="btn btn-primary" type="button" id="button">Save Map</button>
+          <button class="btn btn-primary" type="button" id="showButton" onclick="showMapFunction()">Show Map</button>
+          <br>
+          <button class="btn btn-primary" type="button" id="saveButton" >Save Map</button>
           </span>
+    
 	     </div>
+	     
 	</div>
+	
+
+	
 
 	<div class="container">
 	  <h2>Game Map</h2>
-	  <div class="fix">
+	  <div id="mapDiv" class="fix">
 	  	<div id="grid">
-		    <div id="cell1" >
-		    	 <select id="select00">
+	  		
+	  	
+	  		<% for(var i=0; i< 12; i++) { %>
+     				 <div id="<%="cell"+i%>" >
+		    	 <select id="select">
 		    	 	 <option value="e">Empty</option>
 		 			 <option value="s">Start</option>
 		 			 <option value="f">Finish</option>
 					 <option value="b">Block</option>
 				 </select>
 		    </div>
-		    <div id="cell2">
-		    	<select id="select01">
-	    	         <option value="e">Empty</option>
-		 			 <option value="s">Start</option>
-		 			 <option value="f">Finish</option>
-					 <option value="b">Block</option>
-				 </select>
-		    </div>
-		    <div id="cell3">
-		    	<select id="select02">
-		    		 <option value="e">Empty</option>
-		 			 <option value="s">Start</option>
-		 			 <option value="f">Finish</option>
-					 <option value="b">Block</option>
-				 </select>
-		    </div>
-
-		    <div id="cell4">
-		    	<select id="select10">
-		    		 <option value="e">Empty</option>
-		 			 <option value="s">Start</option>
-		 			 <option value="f">Finish</option>
-					 <option value="b">Block</option>
-				 </select>
-		    </div>
-		    <div id="cell5">
-		    	<select id="select11">
-		    		 <option value="e">Empty</option>
-		 			 <option value="s">Start</option>
-		 			 <option value="f">Finish</option>
-					 <option value="b">Block</option>
-				 </select>
-		    </div>
-		    <div id="cell6">
-		    	<select id="select12">
-		    		 <option value="e">Empty</option>
-		 			 <option value="s">Start</option>
-		 			 <option value="f">Finish</option>
-					 <option value="b">Block</option>
-				 </select>
-		    </div>
-
-		    <div id="cell7">
-		    	<select id="select20">
-		    		 <option value="e">Empty</option>
-		 			 <option value="s">Start</option>
-		 			 <option value="f">Finish</option>
-					 <option value="b">Block</option>
-				 </select>
-		    </div>
-		    <div id="cell8">
-		    	<select id="select21">
-		    		 <option value="e">Empty</option>
-		 			 <option value="s">Start</option>
-		 			 <option value="f">Finish</option>
-					 <option value="b">Block</option>
-				 </select>
-		    </div>
-		    <div id="cell9">
-		    	<select id="select22">
-		    		 <option value="e">Empty</option>
-		 			 <option value="s">Start</option>
-		 			 <option value="f">Finish</option>
-					 <option value="b">Block</option>
-				 </select>
-		    </div>
+      				<% } %>
+		    
 		</div>
 	  </div>
 	</div>
+	
+	
+	<script>
+	
+	
+function showMapFunction() {
+	
+	var mapSize = document.getElementById("map_size").value;
+	
+    var x = document.getElementById("mapDiv");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
 			
 		</div>
 	</div>

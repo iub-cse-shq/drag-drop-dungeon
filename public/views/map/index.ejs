@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-	  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	    <script src="js/Youindex.js"></script>
+		 <title><!--Dungeon --> </title>
+	  <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+			<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--<link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 	</head>
 
+
 <body>
-<div class = "container">
+	
+	<header>
+		<nav>
+			<div class="row clearfix">
+				<img src="image/logo3.png" class="logo">
+				
+				<ul class="main-nav animated bounceIn " id="check-class"> 
+				<li><a href="/index"><button type="button" class ="btn btn-noob">Home</button></a></li>
+					
+					<li><a href="/create2"><button type="button" class ="btn btn-noob">Game Instructions</button></a></li> 
+					<li><a href="/create1"><button type="button" class ="btn btn-noob">Contact Us</button></a></li> 
+				</ul>
+				<a herf="#" class="mobile-icon" onclick="slideshow()"><i class="fa fa-bars"></i></a>
+			</div>
+		</nav>
+		<div class="main-content-header">
+		<h1>Welcome to<br>
+		<span class="colorChange">Drag Dungeon</span></h1>
+		
+		<!--<a herf="/maps/all" class="btn btn-full animated bounceIn"><span class="buttonJump">Let's Play</span></a> -->
+		<a href="/maps/all"><button type="button" class ="btn btn-full animated bounceIn" ><span class="buttonJump">Let's Play</span></button></a>
+		<a href="/create"><button type="button" class ="btn btn-nav">Make</button>
+		
+		</div>
+	</header>
+	
+	
+		
+	
+	
+	<script type="text/javascript">
+		function slideshow(){
+			var x = document.getElementById('check-class');
+			if(x.style.display ==="none"){
+				x.style.display = "block";
+			}
+			else{
+				x.style.display = "none";
+			}
+		}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!--<div class="rotating-box">
+		<div class="single-rb">
+			<div class="front-side">
+				<img src="image/First.jpg" alt="">
+			</div>
+			<div class="back-side">
+				<img src="image/Middle.gif" alt="">
+			</div>
+			<div class="left-side">
+				<img src="image/last.jpg" alt=""></div>
+			<div class="right-side">
+				<img src="image/First.jpg" alt="">
+			</div>
+			<div class="top-side"></div>
+			<div class="bottom-side"></div>
+		</div>
+			
+	</div> 
+	
+	-->
+	
+	
+<!--<div class = "container">
 	<div class = "jumbotron">
 		<h1> Drag Drop Dungeon </h1>
 	</div>
@@ -15,7 +121,7 @@
 <div class = "container" style="margin-top: 40px; text-align: center;">
 	<a href="/maps/all"><button type="button" class ="btn btn-primary btn-lg" style="width: 40%">Play</button></a>
 	<a href="/create"><button type="button" class ="btn btn-primary btn-lg" style="width:40%">Make</button>
-</div>
+</div>-->
 
 </body>
 </html>

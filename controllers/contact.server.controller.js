@@ -41,8 +41,18 @@ exports.list = function(req, res) {
 		request: req
 	});
 };
-
-
+app.post('/submit_user', function(req,res){
+ console.log(req.body);
+ save(req.body);
+ res.status(200);
+ var new_user = new User(req.body);
+ new_user.save(function(err, data){
+   if(err){
+     return res.status(400).json({message: "Could not save user"})
+   }
+   res.status(200).json(data);
+ })
+});
 exports.all = function(req, res) {
   Map.find(function(err, data) {
     if (err) {
