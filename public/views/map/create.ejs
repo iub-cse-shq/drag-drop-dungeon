@@ -57,9 +57,9 @@
 	      <input  type="text" class="form-control"  id="map_name">
          
 	      <span class="input-group-btn">
-          <button class="btn btn-primary" type="button" id="showButton" onclick="showMapFunction()">Show Map</button>
+          <button class="btn btn-primary" type="button"  onclick="showMapFunction()">Show Map</button>
           <br>
-          <button class="btn btn-primary" type="button" id="saveButton" >Save Map</button>
+          <button class="btn btn-primary" type="button"  onclick="saveMapFunction()" >Save Map</button>
           </span>
     
 	     </div>
@@ -71,11 +71,13 @@
 
 	<div class="container">
 	  <h2>Game Map</h2>
+	  
 	  <div id="mapDiv" class="fix">
-	  	<div id="grid">
-	  		
+	  	<div id="grid" name= "mapGrid">
 	  	
-	  		<% for(var i=0; i< 12; i++) { %>
+	  	
+	  		<% for(var i=0; i<9; i++) 
+	  		{ %>
      				 <div id="<%="cell"+i%>" >
 		    	 <select id="select">
 		    	 	 <option value="e">Empty</option>
@@ -93,18 +95,9 @@
 	
 	<script>
 	
+	document.getElementById("mapDiv").style.visibility = "hidden"; 
 	
-function showMapFunction() {
-	
-	var mapSize = document.getElementById("map_size").value;
-	
-    var x = document.getElementById("mapDiv");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
+
 </script>
 			
 		</div>
