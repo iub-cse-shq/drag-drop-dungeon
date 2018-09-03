@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var userSchema = new Schema({  
-    user: {
+var contactUserSchema = new Schema({  
+    contact_user: {
         type: String,
         trim: true,
         default: '',
@@ -24,6 +24,6 @@ var userSchema = new Schema({
     },
 });
 
-var User = mongoose.model('User',userSchema);
+var User = mongoose.model('User',contactUserSchema);
 module.exports = User;
 
